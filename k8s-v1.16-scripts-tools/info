@@ -1,5 +1,0 @@
-kubeadm.x86_64                           1.16.2-0                 @kubernetes   
-kubectl.x86_64                           1.16.2-0                 @kubernetes   
-kubelet.x86_64                           1.16.2-0                 @kubernetes   
-kubernetes-cni.x86_64                    0.7.5-0                  @kubernetes
-cri-tools.x86_64                         1.13.0-0
