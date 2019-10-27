@@ -34,7 +34,7 @@ EOF
 sysctl --system
 
 # Install kubelet kubeadm kubectl
-yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+yum install -y kubelet-1.11.2-0 kubectl-1.11.2-0 kubeadm-1.11.2-0 --disableexcludes=kubernetes
 
 # restart kubelet
 systemctl daemon-reload
