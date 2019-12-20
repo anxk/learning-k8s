@@ -1,8 +1,73 @@
-[TOC]
-
 # k8s v0.3 blocks
 
-### github.com/GoogleCloudPlatform/kubernetes/pkg/kubelet/capabilities
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api
+
+```go
+// Package api contains the latest (or "internal") version of the
+// Kubernetes API objects. This is the API objects as represented in memory.
+// The contract presented to clients is located in the versioned packages,
+// which are sub-directories. The first one is "v1beta1". Those packages
+// describe how a particular version is serialized to storage/network.
+package api
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/validation
+
+```go
+// Package validation has functions for validating the correctness of api
+// objects and explaining what is wrong with them when they aren't valid.
+package validation
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/v1beta1
+
+```go
+// Package v1beta1 is the v1beta1 version of the API.
+package v1beta1
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/v1beta2
+
+```go
+// Package v1beta2 is the v1beta2 version of the API.
+package v1beta2
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/v1beta3
+
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/latest
+
+```go
+// Package latest defines the default output serializations that code should
+// use and imports the required schemas.  It also ensures all previously known
+// and supported API versions are available for conversion. Consumers may
+// import this package in lieu of importing individual versions.
+package latest
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/errors
+
+```go
+// Package errors provides detailed error types for api field validation.
+package errors
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/api/errors/etcd
+
+```go
+// Package etcd provides conversion of etcd errors to API errors.
+package etcd
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/apiserver
+
+```go
+// Package apiserver contains the code that provides a RESTful api service.
+package apiserver
+```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/capabilities
 
 ```go
 // package capbabilities manages system level capabilities
@@ -18,6 +83,12 @@ type Capabilities struct {
 var once sync.Once
 var capabilities *Capabilities
 ```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/client
+
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/cloudprovider
+
 
 ### github.com/GoogleCloudPlatform/kubernetes/pkg/constraint
 
@@ -73,6 +144,8 @@ type RealPodControl struct {
     kubeClient client.Interface
 }
 ```
+
+### github.com/GoogleCloudPlatform/kubernetes/pkg/conversion
 
 ### github.com/GoogleCloudPlatform/kubernetes/pkg/election
 
