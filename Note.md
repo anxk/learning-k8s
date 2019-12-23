@@ -45,5 +45,8 @@
 
 * 网络包的转发过程
 
+## 共享存储
+
+* PV、PVC、StorageClass
 
 
